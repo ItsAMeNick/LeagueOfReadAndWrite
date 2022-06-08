@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import DataDragon from '../DataDragon.js';
 
 import ChampionSpell from "./ChampionSpell.js"
@@ -34,7 +37,7 @@ export default class ChampionSelect extends Component {
                     return <option value={name}>{name}</option>
                 })
             }</select>
-            
+
             <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
             <ChampionSpell champion={this.state.selectedChampion} spell="Q"/>
             <ChampionSpell champion={this.state.selectedChampion} spell="W"/>
