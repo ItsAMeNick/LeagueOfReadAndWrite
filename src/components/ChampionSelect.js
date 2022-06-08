@@ -27,22 +27,31 @@ export default class ChampionSelect extends Component {
     }
 
     render() {
-        return <div>
-            <select onChange = { event =>
-                this.setState({
-                    selectedChampion: event.target.value
-                })
-            }>{
-                this.state.allNames.map(name => {
-                    return <option value={name}>{name}</option>
-                })
-            }</select>
-
-            <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
-            <ChampionSpell champion={this.state.selectedChampion} spell="Q"/>
-            <ChampionSpell champion={this.state.selectedChampion} spell="W"/>
-            <ChampionSpell champion={this.state.selectedChampion} spell="E"/>
-            <ChampionSpell champion={this.state.selectedChampion} spell="R"/>
-        </div>
+    return <Container>
+        <Row>
+            <Col>
+                <select onChange = { event =>
+                    this.setState({
+                        selectedChampion: event.target.value
+                    })
+                }>{
+                    this.state.allNames.map(name => {
+                        return <option value={name}>{name}</option>
+                    })
+                }</select>
+                <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
+            </Col>
+            <Col>
+                <Row>
+                    <Col><ChampionSpell champion={this.state.selectedChampion} spell="Q"/></Col>
+                    <Col><ChampionSpell champion={this.state.selectedChampion} spell="W"/></Col>
+                </Row>
+                <Row>
+                    <Col><ChampionSpell champion={this.state.selectedChampion} spell="E"/></Col>
+                    <Col><ChampionSpell champion={this.state.selectedChampion} spell="R"/></Col>
+                </Row>
+            </Col>
+        </Row>
+    </Container>
     }
 }
