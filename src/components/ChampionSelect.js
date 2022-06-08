@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Image from 'react-bootstrap/Image'
+
 import DataDragon from '../DataDragon.js';
 
 import ChampionSpell from "./ChampionSpell.js"
@@ -12,33 +14,46 @@ export default class ChampionSelect extends Component {
 
         this.state = {
             allNames: [],
-            selectedChampion: ""
+            selectedChampion: "",
+            portraitUrl: ""
         };
     }
 
     componentDidMount() {
         DataDragon.getAllChampionsNames().then(data => {
-            console.log(data)
             this.setState({
-                allNames: data,
-                selectedChampion: data[0]
+                allNames: ["", ...data]
             })
         });
+    }
+
+    selectChampion(champion) {
+        DataDragon.getChampionPortraitURL(champion).then(data => {
+            this.setState({
+                portraitUrl: data
+            })
+        });
+        this.setState({
+            selectedChampion: champion
+        })
     }
 
     render() {
     return <Container>
         <Row>
             <Col>
-                <select onChange = { event =>
-                    this.setState({
-                        selectedChampion: event.target.value
-                    })
-                }>{
-                    this.state.allNames.map(name => {
-                        return <option value={name}>{name}</option>
-                    })
-                }</select>
+                <Image src={this.state.portraitUrl}/>
+            </Col>
+            <Col>
+                <Row>
+                    <select onChange = { event => this.selectChampion(event.target.value)}>
+                        {
+                            this.state.allNames.map(name => {
+                                return <option value={name}>{name}</option>
+                            })
+                        }
+                    </select>
+                    </Row>
                 <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
             </Col>
             <Col>

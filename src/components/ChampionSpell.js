@@ -20,33 +20,35 @@ export default class ChampionSpell extends Component {
     }
 
     updateChamp() {
-        switch(this.props.spell) {
-            case "P":
-                DataDragon.getSingleChampionP(this.props.champion).then(data => {
-                    this.setState(data)
-                });
-                break;
-            case "Q":
-                DataDragon.getSingleChampionQ(this.props.champion).then(data => {
-                    this.setState(data)
-                });
-                break;
-            case "W":
-                DataDragon.getSingleChampionW(this.props.champion).then(data => {
-                    this.setState(data)
-                });
-                break;
-            case "E":
-                DataDragon.getSingleChampionE(this.props.champion).then(data => {
-                    this.setState(data)
-                });
-                break;
-            case "R":
-                DataDragon.getSingleChampionR(this.props.champion).then(data => {
-                    this.setState(data)
-                });
-                break;
-            default:
+        if (this.props.champion != "") {
+            switch(this.props.spell) {
+                case "P":
+                    DataDragon.getSingleChampionP(this.props.champion).then(data => {
+                        this.setState(data)
+                    });
+                    break;
+                case "Q":
+                    DataDragon.getSingleChampionQ(this.props.champion).then(data => {
+                        this.setState(data)
+                    });
+                    break;
+                case "W":
+                    DataDragon.getSingleChampionW(this.props.champion).then(data => {
+                        this.setState(data)
+                    });
+                    break;
+                case "E":
+                    DataDragon.getSingleChampionE(this.props.champion).then(data => {
+                        this.setState(data)
+                    });
+                    break;
+                case "R":
+                    DataDragon.getSingleChampionR(this.props.champion).then(data => {
+                        this.setState(data)
+                    });
+                    break;
+                default:
+            }
         }
     }
 

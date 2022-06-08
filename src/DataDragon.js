@@ -3,7 +3,10 @@ const dataDragon_BaseURL = 'https://ddragon.leagueoflegends.com'
 const ddAPI = '/api'
 const ddCDN = '/cdn'
 const ddData = "/data"
+const ddImg = "/img"
+
 const jsonFileTyle = '.json'
+const pngFileTyle = '.png'
 
 const ddVersions = ddAPI + '/versions' + jsonFileTyle
 const ddLanguage = ddCDN + '/languages' + jsonFileTyle
@@ -55,7 +58,7 @@ class DataDragon {
     static async getSingleChampionFor(version, language, champion) {
         let championRequestURL = dataDragon_BaseURL + ddCDN + "/"
             + version + ddData
-            + language + ddChampion + "/" + champion + ".json"
+            + language + ddChampion + "/" + champion + jsonFileTyle
         return await fetch(championRequestURL).then(response => {
             return response.json()
         });
@@ -63,7 +66,6 @@ class DataDragon {
 
     static async getSingleChampion(champion) {
         const currentVersion = await DataDragon.getCurrentVersion();
-
         return await DataDragon.getSingleChampionFor(currentVersion, ddEnglishLanguageCode, champion);
     }
 
@@ -95,6 +97,19 @@ class DataDragon {
         return await DataDragon.getSingleChampion(champion).then(championData => {
             return championData["data"][champion]["spells"][3]
         })
+    }
+
+    static async getChampionPortraitURLFor(version, champion) {
+        return dataDragon_BaseURL + ddCDN + "/"
+            + version + ddImg
+            + ddChampion + "/" + champion + pngFileTyle
+    }
+
+    static async getChampionPortraitURL(champion) {
+        const currentVersion = await DataDragon.getCurrentVersion();
+        return dataDragon_BaseURL + ddCDN + "/"
+            + currentVersion + ddImg
+            + ddChampion + "/" + champion + pngFileTyle
     }
 }
 
