@@ -39,11 +39,7 @@ export default class ChampionSelect extends Component {
             }</select>
 
             <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
-<<<<<<< HEAD
-            <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
-=======
-            <ChampionSpell champion={this.state.selectedChampion} spell="R"/>
->>>>>>> fea870817e1e9e1cb38d11559d98e9b2c96b6091
+            <ChampionSpell champion={this.state.selectedChampion} spell="Q"/>
             <ChampionSpell champion={this.state.selectedChampion} spell="W"/>
             <ChampionSpell champion={this.state.selectedChampion} spell="E"/>
             <ChampionSpell champion={this.state.selectedChampion} spell="R"/>
