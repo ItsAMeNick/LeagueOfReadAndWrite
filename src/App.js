@@ -1,23 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import DataDragon from './DataDragon.js';
+
+import ChampionSelect from "./components/ChampionSelect.js"
+
+function testRead() {
+    // DataDragon.getVersions().then(data => {
+    //     console.log(data)
+    // })
+    // console.log(DataDragon.getCurrentVersion())
+    // DataDragon.getCurrentVersion().then(data => {
+    //     console.log(data)
+    // })
+    // DataDragon.getLanguages().then(data => {
+    //     console.log(data)
+    // })
+    DataDragon.getSingleChampionP("Aurelion Sol").then(data => {
+        console.log(data)
+    })
+}
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ChampionSelect/>
+      <ChampionSelect/>
+      <ChampionSelect/>
+      <ChampionSelect/>
+      <ChampionSelect/>
     </div>
   );
 }
