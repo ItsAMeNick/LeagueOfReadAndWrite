@@ -53,7 +53,6 @@ export default class ChampionSpell extends Component {
     render() {
         return <div>
             <p>{this.props.spell + ": " + this.state.name}</p>
-            <p style={{fontSize:"10px"}}>{this.state.description}</p>
         </div>
     }
 }
