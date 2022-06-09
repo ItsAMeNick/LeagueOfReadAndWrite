@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
 import Image from 'react-bootstrap/Image';
 
 import '../App.css';
@@ -43,16 +44,19 @@ export default class ChampionSelect extends Component {
     render() {
     return <Container>
         <Row>
-            <Col>
-                <Image className="championPortrait" src={this.state.portraitUrl}/>
-                <Row>
-                    <select className="championSelect" onChange = { event => this.selectChampion(event.target.value)}>
+            <Col xs={3}>
+                <Row className="championPortrait">
+                    <Image  src={this.state.portraitUrl}/>
+                </Row>
+                <p/>
+                <Row className="championSelect">
+                    <Form.Select style={{color: "White", background: "Grey"}} onChange = { event => this.selectChampion(event.target.value)}>
                         {
                             this.state.allNames.map(name => {
-                                return <option value={name}>{name}</option>
+                                return <option className="championSelector" value={name}>{name}</option>
                             })
                         }
-                    </select>
+                    </Form.Select>
                 </Row>
             </Col>
             <Col>

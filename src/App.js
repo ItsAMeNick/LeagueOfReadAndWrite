@@ -10,23 +10,33 @@ import ChampionSelect from "./components/ChampionSelect.js"
 
 function App() {
     return (
-        <Container>
-            <Row>
+        <Container fluid>
+            <Row fluid>
                 <Col className="redSide">
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                 </Col>
-                <Col className="redSide" xs={1}/>
-                <Col className="blueSide" xs={1}/>
                 <Col className="blueSide">
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                     <ChampionSelect/>
+                    <p/>
                 </Col>
             </Row>
         </Container>

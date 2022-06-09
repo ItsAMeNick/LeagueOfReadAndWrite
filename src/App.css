@@ -1,5 +1,10 @@
-.championSelect {
+.appContainer {
+    max-width: 1908;
+}
 
+.championSelect {
+    min-width: 120px;
+    padding-right: 20px;
 }
 
 .championSpell {
@@ -12,13 +17,14 @@
 }
 
 .championPortrait {
-
+    max-height: 120px;
+    max-width: 120px;
 }
 
 .redSide {
-    background: #BF0D3E
+    background: #FF968A
 }
 
 .blueSide {
-    background: #00205B
+    background: #ACE7FF
 }
