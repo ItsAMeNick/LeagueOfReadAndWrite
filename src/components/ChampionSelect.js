@@ -43,8 +43,6 @@ export default class ChampionSelect extends Component {
         <Row>
             <Col>
                 <Image src={this.state.portraitUrl}/>
-            </Col>
-            <Col>
                 <Row>
                     <select onChange = { event => this.selectChampion(event.target.value)}>
                         {
@@ -53,8 +51,7 @@ export default class ChampionSelect extends Component {
                             })
                         }
                     </select>
-                    </Row>
-                <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
+                </Row>
             </Col>
             <Col>
                 <Row>
@@ -64,6 +61,9 @@ export default class ChampionSelect extends Component {
                 <Row>
                     <Col><ChampionSpell champion={this.state.selectedChampion} spell="E"/></Col>
                     <Col><ChampionSpell champion={this.state.selectedChampion} spell="R"/></Col>
+                </Row>
+                <Row>
+                    <ChampionSpell champion={this.state.selectedChampion} spell="P"/>
                 </Row>
             </Col>
         </Row>
