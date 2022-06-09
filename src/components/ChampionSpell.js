@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import DataDragon from '../DataDragon.js';
 
+import '../App.css';
+
 export default class ChampionSpell extends Component {
     constructor(props) {
         super(props);
@@ -53,8 +55,8 @@ export default class ChampionSpell extends Component {
     }
 
     render() {
-        return <div>
-            <p>{this.props.spell + ": " + this.state.name}</p>
+        return <div >
+            <p className="championSpellText">{this.props.spell + ": " + this.state.name}</p>
         </div>
     }
 }

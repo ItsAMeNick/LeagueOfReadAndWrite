@@ -12,15 +12,16 @@ function App() {
     return (
         <Container>
             <Row>
-                <Col>
+                <Col className="redSide">
                     <ChampionSelect/>
                     <ChampionSelect/>
                     <ChampionSelect/>
                     <ChampionSelect/>
                     <ChampionSelect/>
                 </Col>
-                <Col xs={1}/>
-                <Col>
+                <Col className="redSide" xs={1}/>
+                <Col className="blueSide" xs={1}/>
+                <Col className="blueSide">
                     <ChampionSelect/>
                     <ChampionSelect/>
                     <ChampionSelect/>

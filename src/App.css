@@ -1,0 +1,24 @@
+.championSelect {
+
+}
+
+.championSpell {
+    background-color: Grey;
+    border: 1px Black Solid
+}
+
+.championSpellText {
+    color: White
+}
+
+.championPortrait {
+
+}
+
+.redSide {
+    background: #BF0D3E
+}
+
+.blueSide {
+    background: #00205B
+}
