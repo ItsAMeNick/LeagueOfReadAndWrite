@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/LeagueOfReadAndWrite/static/css/main.f666b663.css",
+    "main.js": "/LeagueOfReadAndWrite/static/js/main.f21e786e.js",
+    "static/js/787.e71b823c.chunk.js": "/LeagueOfReadAndWrite/static/js/787.e71b823c.chunk.js",
+    "static/media/logo.svg": "/LeagueOfReadAndWrite/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/LeagueOfReadAndWrite/index.html",
+    "main.f666b663.css.map": "/LeagueOfReadAndWrite/static/css/main.f666b663.css.map",
+    "main.f21e786e.js.map": "/LeagueOfReadAndWrite/static/js/main.f21e786e.js.map",
+    "787.e71b823c.chunk.js.map": "/LeagueOfReadAndWrite/static/js/787.e71b823c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f666b663.css",
+    "static/js/main.f21e786e.js"
+  ]
+}
