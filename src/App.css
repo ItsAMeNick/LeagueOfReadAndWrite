@@ -1,0 +1,30 @@
+.appContainer {
+    max-width: 1908;
+}
+
+.championSelect {
+    min-width: 120px;
+    padding-right: 20px;
+}
+
+.championSpell {
+    background-color: Grey;
+    border: 1px Black Solid
+}
+
+.championSpellText {
+    color: White
+}
+
+.championPortrait {
+    max-height: 120px;
+    max-width: 120px;
+}
+
+.redSide {
+    background: #FF968A
+}
+
+.blueSide {
+    background: #ACE7FF
+}
